@@ -21,7 +21,7 @@ Because it's just another XR Plugin, it works with your existing app, ARFoundati
 LMB (Left Mouse Button) to click/touch/interact with your app
 - Done.
 
-#### Found a bug? Missing a feature?
+#### Found a bug? Missing a feature? 😅
 Please [open an issue](https://github.com/needle-tools/ar-simulation/issues/new/choose) and tell us about it! We want this to be as useful as possible to speed up your workflow.
 
 #### Need more tracked planes?
@@ -148,7 +148,13 @@ Fortunately, Unity provides the ability to build exactly that using the [XR plug
 | -- | -- | -- |
 | Plane Tracking | ✔️ | ✔️ |
 | Touch Input | ✔️ | ❌<sup><a href="#comparison-table-sup-1">1</a></sup> |
+| Pointcloud Detection | ✔️ | ✔️ |
+| Image Tracking | ✔️ | ✔️ |
+| Light Estimation | ✔️ | ❌ |
+| AR Anchors | ✔️ | ❌ |
 | Face Tracking | ❌ | (✔️)<sup><a href="#comparison-table-sup-2">2</a></sup> |
+| Object Tracking | ❌ | ❌ |
+| Human Segmentation | ❌ | ❌ |
 
 
 <sup id="comparison-table-sup-1">1</sup> MARS uses Input.GetMouseButtonDown for editor input AND on-device input. This means: no testing of XR Interaction Toolkit features, no multitouch. You can see the (somewhat embarassing) MARS input example at [this Unity Forum link](https://forum.unity.com/threads/mars-direct-placement-example.908381/).  
@@ -166,7 +172,7 @@ This has lead to funny situations where we reporting bugs around usage in Editor
 - in 2020.1 and 2020.2, even when you enable "New Input System", the Input System package is not installed in package manager. You have to install it manually. [Forum Thread](https://forum.unity.com/threads/new-input-system-not-installed-in-2020-1-after-enabling-it.908027/)
 - switching from a scene with Object Tracking to a scene with Image Tracking on device crashes Android apps (we'll report a bug soon)
 
-### Contact
+### ✍️ Contact
 
 [Forum Thread — ARSimulation]()
 
