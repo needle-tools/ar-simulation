@@ -1,4 +1,4 @@
-## <span class="logo"><a href="../">!=</a></span> ar simulation
+## <a href="https://needle.tools">needle</a></span> — AR Simulation
 > Build AR apps with confidence.  
 Iterate fast, right in Editor.  
 Non-invasive, drop-in solution.  
@@ -17,9 +17,12 @@ Because it's just another XR Plugin, it works with your existing app, ARFoundati
 - Add the ARSimulation package to your project
 - Open any scene that is set up for ARFoundation, or set up a new one with 
 - Press Play
-- Press RMB <span class="inline-image">![Right Mouse Button](../../wiki/images/right-click.svg)</span> + Use WASD to move around,  
-LMB <span class="inline-image">![Left Mouse Button](../../wiki/images/left-click.svg)</span> to click/touch/interact with your app
+- Press RMB (Right Mouse Button) + Use WASD to move around,  
+LMB (Left Mouse Button) to click/touch/interact with your app
 - Done.
+
+#### Found a bug? Missing a feature?
+Please [open an issue](https://github.com/needle-tools/ar-simulation/issues/new/choose) and tell us about it! We want this to be as useful as possible to speed up your workflow.
 
 #### Need more tracked planes?
 - drop SimulatedPlane prefab into the scene in Edit or Play Mode
@@ -76,18 +79,18 @@ In fact, we tested a lot of configurations:
 <sup id="table-sup-3">3</sup> "Support" here means: ARSimulation does not affect your builds, it is purely for Editor simulation.  
 <sup id="table-sup-4">4</sup> We haven't done as extensive testing as with the others yet. This is very useful for multiplayer scenarios.
 
-#### Technical Stuff
+### Technical Stuff
 
 ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and thus plugs right into ARFoundation and other systems in the VR/AR realm inside Unity. 
 
-![XR Architecture - ARSimulation](../../wiki/images/XRArchitecture-ARSimulation.png)
+![XR Architecture - ARSimulation](../../wiki/images/XRArchitecture-ARSimulation.png)  
 *Currently supported features are marked orange.*
 
 This architecture has some advantages:
 - ARSimulation will not clutter your project
 - it does not show up at all in your compiled app (otherwise it's a bug)
 - easier to maintain with future ARFoundation changes
-- requires zero changes 🤞 for working with other plugins that use ARFoundation
+- requires Zero Changes™ for working with other plugins that use ARFoundation
 
 ### Known Issues
 - camera background is supported (with custom 3D scenes), but no occlusion support right now
