@@ -1,4 +1,4 @@
-## <a href="https://needle.tools">needle</a></span> — AR Simulation
+## AR Simulation
 > Build AR apps with confidence.  
 Iterate fast, right in Editor.  
 Non-invasive, drop-in solution.  
@@ -14,8 +14,8 @@ It basically allows you to fly around in the Editor and test out your AR app, wi
 Because it's just another XR Plugin, it works with your existing app, ARFoundation, XR Interaction Toolkit, and even MARS. Zero code changes or setup needed!
 
 ### Quick Start
-- Add the ARSimulation package to your project
-- Open any scene that is set up for ARFoundation, or set up a new one with 
+- Install ARSimulation by dropping this package into Unity: 
+- Open any scene that is set up for ARFoundation, or set up a new one with ARFoundation
 - Press Play
 - Press RMB (Right Mouse Button) + Use WASD to move around,  
 LMB (Left Mouse Button) to click/touch/interact with your app
