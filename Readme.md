@@ -133,7 +133,9 @@ A core concept of MARS is _Functionality Injection_, which at its base feels pre
 
 Our goal are fast iteration times in the Editor for a range of AR applications we and partner companies build. These usually consist of placing and interacting with objects from different angles. We just needed a way to "simulate" an AR device in the Editor, not a full-blown additional framework!  
 
-Fortunately, Unity provides the ability to build exactly that using the [XR plugin architecture]()(https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/): a custom XR provider that works in the Editor and Desktop builds.
+Fortunately, Unity provides the ability to build exactly that using the [XR plugin architecture]()(https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/): a custom XR provider that works in the Editor and Desktop builds.  
+There were quite some challenges, especially around Input System support (we support old/both/new modes now) and touch injection (there's a private Input.SimulateTouch API that is also used by the DeviceSimulator package).  
+Plus, the usual amount of Unity bugs and crashes; we are pretty confident that we worked around most of them and sent bug reports for the others.
 
 #### Comparison between MARS and ARSimulation
 | ⚔ | ARSimulation | MARS |
@@ -179,6 +181,21 @@ This has lead to funny situations where we reporting bugs around usage in Editor
 - Device Simulator disables Mouse input completely - we're working around that here but be aware when you try to create Android / iOS apps that also support mouse. [Forum Thread](https://forum.unity.com/threads/new-device-simulator-preview.751067/page-4#post-5952482)
 - in 2020.1 and 2020.2, even when you enable "New Input System", the Input System package is not installed in package manager. You have to install it manually. [Forum Thread](https://forum.unity.com/threads/new-input-system-not-installed-in-2020-1-after-enabling-it.908027/)
 - switching from a scene with Object Tracking to a scene with Image Tracking on device crashes Android apps (we'll report a bug soon)
+
+### Related solutions
+Since Unity took so long to come out with a viable solution for testing AR projects without building to devices, a number of interesting projects arose to overcome that, especially for remoting.  
+For our own projects, we found that device remoting is still too slow for continuous testing and experimentation, so we made ARSimulation.
+
+[Kirill Kuzyk](https://twitter.com/kirill_kuzyk) recently released a great tool called [AR Foundation Editor Remote](https://stampedegames.wixsite.com/ar-foundation-remote) which uses a similar approach and creates a custom, editor-only XR SDK backend that injects data received from remote Android and iOS devices.  
+[Here's the AR Foundation Editor Remote forum thread](https://forum.unity.com/threads/ar-foundation-editor-remote-test-and-debug-your-ar-project-in-the-editor.898433/).
+
+[Koki Ibukuro](https://twitter.com/asus4) has also experimented with remoting data into the Unity editor for ARFoundation development. His plugin also supports background rendering.  
+It's available on GitHub: [asus4/ARKitStreamer](https://github.com/asus4/ARKitStreamer).
+
+Unity Techologies is of course also experimenting with remoting, and currently has an internal Alpha version that is undergoing user testing.  
+[Here's the forum thread for the upcoming Unity AR Remoting](https://forum.unity.com/threads/ar-remoting-simulation.720575/).
+
+And of course there's [MARS](https://unity.com/de/products/mars), the newly released, 600$/seat/year framework for simplified and flexible AR Authoring. It's probably a great solution for enterprises, and has a ton of additional tooling that goes way beyond what ARFoundation provides. We were Alpha testers of MARS and early on it became clear that it was not what many people believed it to be — a simple way to test your app without building to device. [Here's the Forum section for MARS](https://forum.unity.com/forums/unity-mars.494/).
 
 ### ✍️ Contact
 
