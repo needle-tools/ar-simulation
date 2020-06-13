@@ -3,7 +3,7 @@
 Iterate fast, right in Editor.  
 Non-invasive, drop-in solution.  
 
-<a href="#quick-start-">Quick Start</a> ⚡ • <a href="#technical-details-">Technical Details</a> 🔎 • <a href="#but-there-is-also-mars-now-">Comparison to MARS</a> 🚀 • <a href="#related-solutions-">Related Solutions</a> 👪 • <a href="#contact-">Say hi</a> ✍️
+<a href="#quick-start-">Quick Start</a> ⚡ • <a href="#technical-details-">Technical Details</a> 🔎 • <a href="#but-there-is-also-mars-now">Comparison to MARS</a> 🚀 • <a href="#related-solutions-">Related Solutions</a> 👪 • <a href="#contact-">Say hi</a> ✍️
 
 ## What is this?
   
@@ -60,8 +60,8 @@ Import the Sample "Example Apartment" for a nicely dressed apartement as startin
 *Click preview to watch video*
 
 ### Works great with 
-- Device Simulator (but works without) 📱
-- Input System: both (but works with old/new/both) 👆
+- 📱 Device Simulator (but works without)
+- 👆 Input System: both (but works with old/new/both) 
 
 In fact, we tested a lot of configurations:
 
