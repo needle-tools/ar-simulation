@@ -3,6 +3,8 @@
 Iterate fast, right in Editor.  
 Non-invasive, drop-in solution.  
 
+<a href="#quick-start-">Quick Start</a> • <a href="#technical-details-">Technical Details</a> • <a href="#but-there-is-also-mars-now-">Comparison to MARS</a> • <a href="#related-solutions-">Related Solutions</a> • <a href="#contact-">Contact</a>
+
 ## What is this?
 ARSimulation is a custom XR backend built on top of the [XR plugin architecture](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/).  
 
@@ -11,9 +13,9 @@ It basically allows you to fly around in the Editor and test out your AR app, wi
 [![Zero Setup](../../wiki/images/simple-explanation.gif)](https://youtu.be/3b0rXkKGPF8)  
 *This scene only uses ARFoundation features.*
 
-Because it's just another XR Plugin, it works with your existing app, ARFoundation, XR Interaction Toolkit, and even MARS. Zero code changes or setup needed!
+Because it's just another XR Plugin, it works with your existing app, ARFoundation, XR Interaction Toolkit, ... Zero changes to your code or setup needed! ✨
 
-## Quick Start
+## Quick Start ⚡
 - Install ARSimulation by dropping this package into Unity: 
 - Open any scene that is set up for ARFoundation, or set up a new one with ARFoundation
 - Press Play
@@ -21,10 +23,10 @@ Because it's just another XR Plugin, it works with your existing app, ARFoundati
 LMB (Left Mouse Button) to click/touch/interact with your app
 - Done.
 
-### Found a bug? Missing a feature? 😅
+### Found a bug? 😅 Missing a feature?  
 Please [open an issue](https://github.com/needle-tools/ar-simulation/issues/new/choose) and tell us about it! We want this to be as useful as possible to speed up your workflow.
 
-### Need more tracked planes?
+### Need more tracked planes? ✈
 - drop SimulatedPlane prefab into the scene in Edit or Play Mode
 - move and adjust as necessary  
 
@@ -34,13 +36,13 @@ Please [open an issue](https://github.com/needle-tools/ar-simulation/issues/new/
 The same works for Point Clouds.  
 (Tracked 3D Objects Coming Soon™)
 
-### Working with Image Tracking?
+### Working with Image Tracking? 🖾
 - just press play, if your scene uses image tracking a Simulated Tracked Image is generated for you.
 - if you're using more than one tracked image, generate them with Empty GameObject + SimulatedARTrackedImage of your choice
   (needs to be in a ReferenceImageLibrary of course)
 
 
-### Want to test against a more complicated scenery?
+### Want to test against a more complicated scenery? 🏰
 - add your geometry, ideally as Prefab
 - add a SimulatedReality component to it
 - press Play
@@ -52,13 +54,13 @@ The same works for Point Clouds.
 Import the Sample "Example Apartment" for a nicely dressed apartement as starting point:
 [![sample: Example Apartment](../../wiki/images/simulated-environment.gif)]
 
-### URP example
+### URP example 🔨
 [![URP Sample scene as Environment](../../wiki/images/urp-yt-preview.jpg)](https://youtu.be/RLLoR3mZ_fg)  
 *Click preview to watch video*
 
-### Works great with
-- Device Simulator (but works without)
-- Input System: both (but works with old/new/both)
+### Works great with 
+- Device Simulator (but works without) 📱
+- Input System: both (but works with old/new/both) 👆
 
 In fact, we tested a lot of configurations:
 
@@ -83,7 +85,7 @@ In fact, we tested a lot of configurations:
 
 ![AR Simulation running in Device Simulator](../../wiki/images/device-simulator.gif)
 
-## Technical Stuff
+## Technical Details 🔎
 
 ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and thus plugs right into ARFoundation and other systems in the VR/AR realm inside Unity. 
 
@@ -96,7 +98,7 @@ ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and th
 - easier to maintain with future ARFoundation changes
 - requires Zero Changes™ for working with other plugins that use ARFoundation
 
-## Known Issues
+## Known Issues 🚧
 - camera background is supported (with custom 3D scenes), but no occlusion support right now
 - environment cubemap support is platform-specific  
   (Unity bug, [Issue Tracker Link](https://issuetracker.unity3d.com/product/unity/issues/guid/1215635))
@@ -113,7 +115,7 @@ ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and th
   We have no idea what that means, [Link to Forum Thread](https://forum.unity.com/threads/warnings-in-editor-when-using-custom-xrsystem.908852/)  
 - ARSimulation currently has a dependency on XRLegacyInputHelpers that isn't needed in call cases; we will remove that dependency in a future release.  
 
-## But there is also MARS now!
+## But there is also MARS now! 🚀
 
 **Long story short:**
 - If you are starting a new project, are new to AR dev but have a lot of financial resources, are building a very complex AR app with multiple planes and dynamic content and constraints between objects, then MARS might be a good fit.  
@@ -137,7 +139,7 @@ Fortunately, Unity provides the ability to build exactly that using the [XR plug
 There were quite some challenges, especially around Input System support (we support old/both/new modes now) and touch injection (there's a private Input.SimulateTouch API that is also used by the DeviceSimulator package).  
 Plus, the usual amount of Unity bugs and crashes; we are pretty confident that we worked around most of them and sent bug reports for the others.
 
-### Comparison between MARS and ARSimulation
+### Comparison between MARS and ARSimulation ⚔
 | ⚔ | ARSimulation | MARS |
 | -- | -- | -- |
 | Claim | Non-invasive editor simulation backend for ARFoundation | Framework for simplified, flexible AR Authoring |
@@ -170,7 +172,7 @@ Note that MARS has a lot of additional tools and features (functionality injecti
 <sup id="comparison-table-sup-3">3</sup> MARS uses a custom "Device View", but doesn't support the Unity-provided Device Simulator package. This means you can't test your UIs with MARS with proper DPI settings (e.g. the typical use of *Canvas: Physical Size*).  
 <sup id="comparison-table-sup-4">4</sup> MARS has a concept of *Landmarks* that are created from ARKit blendshapes and ARCore raw meshes, but no direct support for either.  
 
-## Open Issues on Unity's end
+## Open Issues on Unity's end 🚧
 Unfortunately it seems nobody at Unity anticipated someone building custom XR providers in C# that are actually supposed to work in the Editor. It's advertised as a "way to build custom C++ plugins" only.  
 
 This has lead to funny situations where we reporting bugs around usage in Editor (e.g. of the ARFoundation Samples, XR Interaction Toolkit, and others), and Unity telling us that these "don't matter since you can't use them in Editor anyways". Well guys, we hope now you see why we were asking.  
@@ -182,7 +184,7 @@ This has lead to funny situations where we reporting bugs around usage in Editor
 - in 2020.1 and 2020.2, even when you enable "New Input System", the Input System package is not installed in package manager. You have to install it manually. [Forum Thread](https://forum.unity.com/threads/new-input-system-not-installed-in-2020-1-after-enabling-it.908027/)
 - switching from a scene with Object Tracking to a scene with Image Tracking on device crashes Android apps (we'll report a bug soon)
 
-## Related solutions
+## Related solutions 👪
 Since Unity took so long to come out with a viable solution for testing AR projects without building to devices, a number of interesting projects arose to overcome that, especially for remoting.  
 For our own projects, we found that device remoting is still too slow for continuous testing and experimentation, so we made ARSimulation.
 
@@ -197,7 +199,7 @@ Unity Techologies is of course also experimenting with remoting, and currently h
 
 And of course there's [MARS](https://unity.com/de/products/mars), the newly released, 600$/seat/year framework for simplified and flexible AR Authoring. It's probably a great solution for enterprises, and has a ton of additional tooling that goes way beyond what ARFoundation provides. We were Alpha testers of MARS and early on it became clear that it was not what many people believed it to be — a simple way to test your app without building to device. [Here's the Forum section for MARS](https://forum.unity.com/forums/unity-mars.494/).
 
-## ✍️ Contact
+## Contact ✍️
 
 [Forum Thread — ARSimulation]()
 
