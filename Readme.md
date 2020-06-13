@@ -109,8 +109,9 @@ ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and th
 - if your scene feels to dark / does not use environment lighting, make sure "Auto Generate" is on in Lighting Window or bake light data.  
   (spherical harmonics simulation will only work if the shaders are aware that they should use it)
 - ARFoundation 4 logs warnings in Editor:  
-  "No active UnityEngine.XR.XRInputSubsystem is available. Please ensure that a valid loader configuration exists in the XR project settings."
-  We have no idea what that means, [Link to Forum Thread](https://forum.unity.com/threads/warnings-in-editor-when-using-custom-xrsystem.908852/)
+  "No active UnityEngine.XR.XRInputSubsystem is available. Please ensure that a valid loader configuration exists in the XR project settings."  
+  We have no idea what that means, [Link to Forum Thread](https://forum.unity.com/threads/warnings-in-editor-when-using-custom-xrsystem.908852/)  
+- ARSimulation currently has a dependency on XRLegacyInputHelpers that isn't needed in call cases; we will remove that dependency in a future release.  
 
 ### But there is also MARS now!
 
@@ -143,26 +144,29 @@ Fortunately, Unity provides the ability to build exactly that using the [XR plug
 | Changes to project | none |  |
 | Required changes | none | ARFoundation components need to be replaced with their MARS counterparts |
   
-  
+**The following table compares ARSimulation and MARS in respect to in-editor simulation for features available in ARFoundation.**  
+Note that MARS has a lot of additional tools and features (functionality injection, proxies, recordings, automatic placement of objects, constraints, ...) not mentioned here that might be relevant to your usecase. See the [MARS docs](https://docs.unity3d.com/Packages/com.unity.mars@1.0/manual/MARSConcepts.html) for additional featuers.
+
 | ⚔ | ARSimulation<br>*Simulation Features* | MARS<br>*Simulation Features* |
 | -- | -- | -- |
 | Plane Tracking | ✔️ | ✔️ |
 | Touch Input | ✔️ | ❌<sup><a href="#comparison-table-sup-1">1</a></sup> |
 | Simulated Environments | (✔️)<sup><a href="#comparison-table-sup-2">2</a></sup> | ✔️ |
-| Face Tracking | ❌ | (✔️)<sup><a href="#comparison-table-sup-3">3</a></sup> |
 | Device Simulator | ✔️ | ❌<sup><a href="#comparison-table-sup-4">4</a></sup> |
 | Point Clouds | ✔️ | ✔️ |
 | Image Tracking | ✔️ | ✔️ |
 | Light Estimation<br>Spherical Harmonics | ✔️ | ❌ |
 | Anchors | ✔️ | ❌ |
+| Meshing | (✔️) | ✔️ |
+| Face Tracking | ❌ | (✔️)<sup><a href="#comparison-table-sup-3">3</a></sup> |
 | Object Tracking | ❌ | ❌ |
 | Human Segmentation | ❌ | ❌ |
 
 
-<sup id="comparison-table-sup-1">1</sup> MARS uses `Input.GetMouseButtonDown` for editor input AND on-device input. This means: no testing of XR Interaction Toolkit features, no multitouch. You can see the (somewhat embarassing) MARS input example at [this Unity Forum link](https://forum.unity.com/threads/mars-direct-placement-example.908381/).  
-<sup id="comparison-table-sup-2">2</sup> ARSimulation doesn't support occlusion right now, which matches what ARFoundation shaders currently do (no occlusion).
-<sup id="comparison-table-sup-3">3</sup> MARS has a concept of "Landmarks" that are created from ARKit blendshapes and ARCore raw meshes, but no direct support for either.
-<sup id="comparison-table-sup-4">4</sup> MARS uses a custom "Device View", but doesn't support the Unity-created Device Simulator package. This means you can't test your UIs with MARS in with DPI settings (e.g. the typical use of `Canvas: Physical Size`).
+<sup id="comparison-table-sup-1">1</sup> MARS uses `Input.GetMouseButtonDown` for editor input AND on-device input. This means: no testing of XR Interaction Toolkit features, no multitouch. You can see the (somewhat embarassing) MARS input example at [this Unity Forum link](https://forum.unity.com/threads/mars-direct-placement-example.908381/). ARSimulation supports full single-touch simulation in GameView and DeviceSimulator.  
+<sup id="comparison-table-sup-2">2</sup> ARSimulation doesn't support occlusion right now, which matches what ARFoundation shaders currently do (no occlusion).  
+<sup id="comparison-table-sup-3">3</sup> MARS has a concept of *Landmarks* that are created from ARKit blendshapes and ARCore raw meshes, but no direct support for either.  
+<sup id="comparison-table-sup-4">4</sup> MARS uses a custom "Device View", but doesn't support the Unity-provided Device Simulator package. This means you can't test your UIs with MARS with proper DPI settings (e.g. the typical use of *Canvas: Physical Size*).  
 
 ### Open Issues on Unity's end
 Unfortunately it seems nobody at Unity anticipated someone building custom XR providers in C# that are actually supposed to work in the Editor. It's advertised as a "way to build custom C++ plugins" only.  
