@@ -49,7 +49,8 @@ The same works for Point Clouds.
 
 [Video: Complex Environment Simulation](https://youtu.be/nPvPdRppIpY)
 
-Import the Sample " for a nicely dressed apartement as starting point.
+Import the Sample "Example Apartment" for a nicely dressed apartement as starting point:
+[![Apartment sample sample](../../wiki/images/simulated-environment.gif)](https://youtu.be/RLLoR3mZ_fg)
 
 #### URP example
 [![URP Sample scene as Environment](../../wiki/images/urp-yt-preview.jpg)](https://youtu.be/RLLoR3mZ_fg)  
