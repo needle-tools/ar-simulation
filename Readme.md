@@ -48,12 +48,12 @@ The same works for Point Clouds.
 - add a SimulatedReality component to it
 - press Play
 - done.
-- (background camera image injection is experimental, but regular geometry "just works")
+- (📷 background camera image rendering is experimental right now)
 
 [Video: Complex Environment Simulation](https://youtu.be/nPvPdRppIpY)
 
-Import the Sample "Example Apartment" for a nicely dressed apartement as starting point:
-[![sample: Example Apartment](../../wiki/images/simulated-environment.gif)]
+Import the Sample "Example Apartment" for a nicely dressed apartement 🏡 as starting point:
+![sample: Example Apartment](../../wiki/images/simulated-environment.gif)
 
 ### URP example 🔨
 [![URP Sample scene as Environment](../../wiki/images/urp-yt-preview.jpg)](https://youtu.be/RLLoR3mZ_fg)  
