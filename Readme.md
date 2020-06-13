@@ -3,17 +3,18 @@
 Iterate fast, right in Editor.  
 Non-invasive, drop-in solution.  
 
-<a href="#quick-start-">Quick Start</a> • <a href="#technical-details-">Technical Details</a> • <a href="#but-there-is-also-mars-now-">Comparison to MARS</a> • <a href="#related-solutions-">Related Solutions</a> • <a href="#contact-">Contact</a>
+<a href="#quick-start-">Quick Start</a> ⚡ • <a href="#technical-details-">Technical Details</a> 🔎 • <a href="#but-there-is-also-mars-now-">Comparison to MARS</a> 🚀 • <a href="#related-solutions-">Related Solutions</a> 👪 • <a href="#contact-">Say hi</a> ✍️
 
 ## What is this?
-ARSimulation is a custom XR backend built on top of the [XR plugin architecture](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/).  
-
-It basically allows you to fly around in the Editor and test out your AR app, without having to change any code or structure. Import the package and go.
+  
+This package allows you to fly around in the Editor and test your AR app, without having to change any code or structure. Iterate faster, test out more ideas, build better apps.  
+ARSimulation is a custom XR backend, built on top of the [XR plugin architecture](https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/).
 
 [![Zero Setup](../../wiki/images/simple-explanation.gif)](https://youtu.be/3b0rXkKGPF8)  
 *This scene only uses ARFoundation features.*
 
-Because it's just another XR Plugin, it works with your existing app, ARFoundation, XR Interaction Toolkit, ... Zero changes to your code or setup needed! ✨
+Because it's just another XR Plugin and we took great care to simulate important features, it works with your existing app, ARFoundation, XR Interaction Toolkit — zero changes to your code or setup needed! ✨  
+And if you need more control, there's a lot of knobs to turn. 
 
 ## Quick Start ⚡
 - Install ARSimulation by dropping this package into Unity: 
@@ -185,7 +186,7 @@ This has lead to funny situations where we reporting bugs around usage in Editor
 - switching from a scene with Object Tracking to a scene with Image Tracking on device crashes Android apps (we'll report a bug soon)
 
 ## Related solutions 👪
-Since Unity took so long to come out with a viable solution for testing AR projects without building to devices, a number of interesting projects arose to overcome that, especially for remoting.  
+Since Unity still hasn't provided a viable solution for testing AR projects without building to devices, a number of interesting projects arose to overcome that, especially for remoting.  
 For our own projects, we found that device remoting is still too slow for continuous testing and experimentation, so we made ARSimulation.
 
 [Kirill Kuzyk](https://twitter.com/kirill_kuzyk) recently released a great tool called [AR Foundation Editor Remote](https://stampedegames.wixsite.com/ar-foundation-remote) which uses a similar approach and creates a custom, editor-only XR SDK backend that injects data received from remote Android and iOS devices.  
@@ -203,7 +204,8 @@ And of course there's [MARS](https://unity.com/de/products/mars), the newly rele
 
 [Forum Thread — ARSimulation]()
 
-<b>[needle — tools for unity](https://needle.tools)</b>
-[@NeedleTools](https://twitter.com/NeedleTools)
-[@marcel_wiessler](https://twitter.com/marcel_wiessler)
-[@hybridherbst](https://twitter.com/hybdridherbst)
+<b>[needle — tools for unity](https://needle.tools)</b> • 
+[@NeedleTools](https://twitter.com/NeedleTools) • 
+[@marcel_wiessler](https://twitter.com/marcel_wiessler) • 
+[@hybridherbst](https://twitter.com/hybdridherbst) • 
+[Say hi!](mailto:hi@needle.tools?subject=Hi!)
