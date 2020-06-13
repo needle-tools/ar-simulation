@@ -8,7 +8,7 @@ ARSimulation is a custom XR backend built on top of the [XR plugin architecture]
 
 It basically allows you to fly around in the Editor and test out your AR app, without having to change any code or structure. Import the package and go.
 
-[![Zero Setup](../../wiki/images/simple-explanation.gif)](https://youtu.be/3b0rXkKGPF8)
+[![Zero Setup](../../wiki/images/simple-explanation.gif)](https://youtu.be/3b0rXkKGPF8)  
 *This scene only uses ARFoundation features.*
 
 Because it's just another XR Plugin, it works with your existing app, ARFoundation, XR Interaction Toolkit, and even MARS. Zero code changes or setup needed!
@@ -52,7 +52,8 @@ The same works for Point Clouds.
 Import the Sample " for a nicely dressed apartement as starting point.
 
 #### URP example
-[![URP Sample scene as Environment](../../wiki/images/urp-yt-preview.jpg)](https://youtu.be/RLLoR3mZ_fg)
+[![URP Sample scene as Environment](../../wiki/images/urp-yt-preview.jpg)](https://youtu.be/RLLoR3mZ_fg)  
+*Click preview to watch video*
 
 #### Works great with
 - Device Simulator (but works without)
@@ -77,7 +78,7 @@ In fact, we tested a lot of configurations:
 <sup id="table-sup-1">1</sup> Recommended. Feels very nice to use, and gives correct sizes for UI etc.  
 <sup id="table-sup-2">2</sup> HDRP is not supported by Unity on iOS/Android currently.  
 <sup id="table-sup-3">3</sup> "Support" here means: ARSimulation does not affect your builds, it is purely for Editor simulation.  
-<sup id="table-sup-4">4</sup> We haven't done as extensive testing as with the others yet. This is very useful for multiplayer scenarios.
+<sup id="table-sup-4">4</sup> We haven't done as extensive testing as with the others yet. Making Desktop builds with ARSimulation is very useful for testing multiplayer scenarios without the need to deploy to multiple mobile devices.
 
 ### Technical Stuff
 
@@ -86,7 +87,7 @@ ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and th
 ![XR Architecture - ARSimulation](../../wiki/images/XRArchitecture-ARSimulation.png)  
 *Currently supported features are marked orange.*
 
-This architecture has some advantages:
+**This architecture has some advantages:**
 - ARSimulation will not clutter your project
 - it does not show up at all in your compiled app (otherwise it's a bug)
 - easier to maintain with future ARFoundation changes
@@ -111,37 +112,44 @@ This architecture has some advantages:
 ### But there is also MARS now!
 
 **Long story short:**
-- If you are starting a new project, are new to AR dev, are building a very complex AR app with multiple planes and dynamic content distribution, then MARS might be a good fit.  
+- If you are starting a new project, are new to AR dev but have a lot of financial resources, are building a very complex AR app with multiple planes and dynamic content and constraints between objects, then MARS might be a good fit.  
 - If you have an existing project, are fine with ARFoundation`s feature set, are using other extensions on top of ARFoundation, are building a relatively simple AR app, don't want to shell out 600$/year/seat, ARSimulation might be helpful.
 
-> MARS: A Framework for Simplified, Flexible AR Authoring  
+#### MARS: A Framework for Simplified, Flexible AR Authoring  
 
-Unity describes MARS (Mixed and Augmented Reality Studio) as "a framework for simplified, flexible AR authoring". We were active alpha testers, trying to use it for our own AR applications, and started developing our own solution in parallel. After a while, we stopped using MARS (besides of course testing and giving feedback to new releases).  
+Unity describes [MARS (Mixed and Augmented Reality Studio)](https://unity.com/de/products/mars) as "a framework for simplified, flexible AR authoring". We were active alpha testers, trying to use it for our own AR applications, and started developing our own solution in parallel. After a while, we stopped using MARS (besides of course testing and giving feedback to new releases).  
 
-MARS is very ambitious and future-facing. It tries to anticipate many new types of devices and sensors, and to do that, reinvents the wheel (namely: ARFoundation) in many places.  
+MARS is very ambitious and future-facing. It tries to anticipate many new types of devices and sensors, and to do that, reinvents the wheel (namely: basic ARFoundation features) in many places.  
 It wraps _around_ ARFoundation instead of extending it, which is great for some usecases but makes it very heavy for others.  
 A core concept of MARS is _Functionality Injection_, which at its base feels pretty similar to what the XR SDK system is trying to achieve (note: FI might allow for more complex scenarious, but solves a similar problem of device-specific implementations.)
 
 ![XR Architecture - MARS](../../wiki/images/XRArchitecture-Mars.png)
 
-> ARSimulation: A non-invasive Editor Simulation Backend
+#### ARSimulation: A non-invasive Editor Simulation Backend
 
 Our goal are fast iteration times in the Editor for a range of AR applications we and partner companies build. These usually consist of placing and interacting with objects from different angles. We just needed a way to "simulate" an AR device in the Editor, not a full-blown additional framework!  
 
 Fortunately, Unity provides the ability to build exactly that using the [XR plugin architecture]()(https://blogs.unity3d.com/2020/01/24/unity-xr-platform-updates/): a custom XR provider that works in the Editor and Desktop builds.
 
-#### Cons of MARS
-- adds 6 packages to your project
-- contains everything: custom tooling, custom handles, massive settings constructs, code generators, file system watchers, a completely custom provider backend, ...
-- initial setup: just adding MARS packages creates >50 new files in your project (+50 more for .meta files)
-    - 5 new top-level folders in your project
-    - 27 different ScriptableObjects with settings
-    - 18 code-generated scripts with defines etc.
-    - new tags
-    - some asmdefs
-    - etc.
-- once you start using MARS, there isn't really a way back
-- MARS wraps around ARFoundation instead of extending it. This means it's not really feasible to use it for existing projects, unless you plan on converting a bunch of things to new components and 
+#### Comparison between MARS and ARSimulation
+| ⚔ | ARSimulation | MARS |
+| -- | -- | -- |
+| Claim | Non-invasive editor simulation backend for ARFoundation | Framework for simplified, flexible AR Authoring |
+| Functionality | XR SDK plugin for Desktop:<br>positional tracking simulation, touch input simulation, image tracking, ... | Wrapper around ARFoundation with added functionality: <br>custom simulation window, object constraints and forces, editor simulation (including most of what ARSimulation can do), file system watchers, custom Editor handles, codegen, ... |
+| Complexity | <ul><li>1 package</li><li>no additional files in project,<br>only for XR SDK configuration</li><li>< 80 Types</li></ul> | <ul><li>6 packages</li><li>5 new top-level folders in your project</li><li>> 800 Types and classes</li><li>27 different ScriptableObjects with settings</li><li>18 code-generated scripts with defines etc.</li></ul> |
+| Changes to project | none |  |
+| Required changes | none | ARFoundation components need to be replaced with their MARS counterparts |
+  
+  
+| ⚔ | ARSimulation<br>*Simulation Features* | MARS<br>*Simulation Features* |
+| -- | -- | -- |
+| Plane Tracking | ✔️ | ✔️ |
+| Touch Input | ✔️ | ❌<sup><a href="#comparison-table-sup-1">1</a></sup> |
+| Face Tracking | ❌ | (✔️)<sup><a href="#comparison-table-sup-2">2</a></sup> |
+
+
+<sup id="comparison-table-sup-1">1</sup> MARS uses Input.GetMouseButtonDown for editor input AND on-device input. This means: no testing of XR Interaction Toolkit features, no multitouch. You can see the (somewhat embarassing) MARS input example at [this Unity Forum link](https://forum.unity.com/threads/mars-direct-placement-example.908381/).  
+<sup id="comparison-table-sup-2">2</sup> MARS has a concept of "Landmarks" that are created from ARKit blendshapes and ARCore raw meshes, but no direct support for either.
 
 ### Open Issues on Unity's end
 Unfortunately it seems nobody at Unity anticipated someone building custom XR providers in C# that are actually supposed to work in the Editor. It's advertised as a "way to build custom C++ plugins" only.  
