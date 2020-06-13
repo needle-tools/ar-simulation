@@ -148,17 +148,21 @@ Fortunately, Unity provides the ability to build exactly that using the [XR plug
 | -- | -- | -- |
 | Plane Tracking | ✔️ | ✔️ |
 | Touch Input | ✔️ | ❌<sup><a href="#comparison-table-sup-1">1</a></sup> |
-| Pointcloud Detection | ✔️ | ✔️ |
+| Simulated Environments | (✔️)<sup><a href="#comparison-table-sup-2">2</a></sup> | ✔️ |
+| Face Tracking | ❌ | (✔️)<sup><a href="#comparison-table-sup-3">3</a></sup> |
+| Device Simulator | ✔️ | ❌<sup><a href="#comparison-table-sup-4">4</a></sup> |
+| Point Clouds | ✔️ | ✔️ |
 | Image Tracking | ✔️ | ✔️ |
-| Light Estimation | ✔️ | ❌ |
-| AR Anchors | ✔️ | ❌ |
-| Face Tracking | ❌ | (✔️)<sup><a href="#comparison-table-sup-2">2</a></sup> |
+| Light Estimation<br>Spherical Harmonics | ✔️ | ❌ |
+| Anchors | ✔️ | ❌ |
 | Object Tracking | ❌ | ❌ |
 | Human Segmentation | ❌ | ❌ |
 
 
-<sup id="comparison-table-sup-1">1</sup> MARS uses Input.GetMouseButtonDown for editor input AND on-device input. This means: no testing of XR Interaction Toolkit features, no multitouch. You can see the (somewhat embarassing) MARS input example at [this Unity Forum link](https://forum.unity.com/threads/mars-direct-placement-example.908381/).  
-<sup id="comparison-table-sup-2">2</sup> MARS has a concept of "Landmarks" that are created from ARKit blendshapes and ARCore raw meshes, but no direct support for either.
+<sup id="comparison-table-sup-1">1</sup> MARS uses `Input.GetMouseButtonDown` for editor input AND on-device input. This means: no testing of XR Interaction Toolkit features, no multitouch. You can see the (somewhat embarassing) MARS input example at [this Unity Forum link](https://forum.unity.com/threads/mars-direct-placement-example.908381/).  
+<sup id="comparison-table-sup-2">2</sup> ARSimulation doesn't support occlusion right now, which matches what ARFoundation shaders currently do (no occlusion).
+<sup id="comparison-table-sup-3">3</sup> MARS has a concept of "Landmarks" that are created from ARKit blendshapes and ARCore raw meshes, but no direct support for either.
+<sup id="comparison-table-sup-4">4</sup> MARS uses a custom "Device View", but doesn't support the Unity-created Device Simulator package. This means you can't test your UIs with MARS in with DPI settings (e.g. the typical use of `Canvas: Physical Size`).
 
 ### Open Issues on Unity's end
 Unfortunately it seems nobody at Unity anticipated someone building custom XR providers in C# that are actually supposed to work in the Editor. It's advertised as a "way to build custom C++ plugins" only.  
