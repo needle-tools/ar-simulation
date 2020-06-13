@@ -81,6 +81,8 @@ In fact, we tested a lot of configurations:
 <sup id="table-sup-3">3</sup> "Support" here means: ARSimulation does not affect your builds, it is purely for Editor simulation.  
 <sup id="table-sup-4">4</sup> We haven't done as extensive testing as with the others yet. Making Desktop builds with ARSimulation is very useful for testing multiplayer scenarios without the need to deploy to multiple mobile devices.
 
+![AR Simulation running in Device Simulator](../../wiki/images/device-simulator.gif)
+
 ### Technical Stuff
 
 ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and thus plugs right into ARFoundation and other systems in the VR/AR realm inside Unity. 
