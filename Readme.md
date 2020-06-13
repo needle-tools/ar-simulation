@@ -3,7 +3,14 @@
 Iterate fast, right in Editor.  
 Non-invasive, drop-in solution.  
 
-<a href="#quick-start-">Quick Start</a> ⚡ • <a href="#technical-details-">Technical Details</a> 🔎 • <a href="#but-there-is-also-mars-now">Comparison to MARS</a> 🚀 • <a href="#related-solutions-">Related Solutions</a> 👪 • <a href="#contact-">Say hi</a> ✍️
+<a href="#quick-start-">Quick Start</a> ⚡ • 
+<a href="#license--pricing-">License & Pricing</a> 💸 • 
+<a href="documentation-">Documentation</a> 📜
+  
+<a href="#technical-details-">Technical Details</a> 🔎 • 
+<a href="#but-there-is-also-mars-now-">Comparison to MARS</a> 🚀 • 
+<a href="#related-solutions-">Related Solutions</a> 👪 • 
+<a href="#contact-✍️">Say hi</a> ✍️
 
 ## What is this?
   
@@ -17,12 +24,22 @@ Because it's just another XR Plugin and we took great care to simulate important
 And if you need more control, there's a lot of knobs to turn. 
 
 ## Quick Start ⚡
-- Install ARSimulation by dropping this package into Unity: 
+- Install ARSimulation by dropping this package into Unity:  
+  📦 • [ARSimulation Installer]()
 - Open any scene that is set up for ARFoundation, or set up a new one with ARFoundation
 - Press Play
 - Press RMB (Right Mouse Button) + Use WASD to move around,  
 LMB (Left Mouse Button) to click/touch/interact with your app
 - Done.
+
+## License & Pricing 💸  
+Using ARSimulation **requires a license** — please buy seats for your team through Unity AssetStore (link coming soon).  
+
+You can use it for 7 days **for evaluation purposes**, without buying a license. We trust you. 🧐  
+
+## Documentation 📜
+
+We are working on improving the docs right now and making some nice "Getting Started" videos. Stay tuned — until then, here's some things you might need:
 
 ### Found a bug? 😅 Missing a feature?  
 Please [open an issue](https://github.com/needle-tools/ar-simulation/issues/new/choose) and tell us about it! We want this to be as useful as possible to speed up your workflow.
@@ -37,7 +54,7 @@ Please [open an issue](https://github.com/needle-tools/ar-simulation/issues/new/
 The same works for Point Clouds.  
 (Tracked 3D Objects Coming Soon™)
 
-### Working with Image Tracking? 🖾
+### Working with Image Tracking? 🖼
 - just press play, if your scene uses image tracking a Simulated Tracked Image is generated for you.
 - if you're using more than one tracked image, generate them with Empty GameObject + SimulatedARTrackedImage of your choice
   (needs to be in a ReferenceImageLibrary of course)
@@ -60,10 +77,11 @@ Import the Sample "Example Apartment" for a nicely dressed apartement 🏡 as st
 *Click preview to watch video*
 
 ### Works great with 
-- 📱 Device Simulator (but works without)
-- 👆 Input System: both (but works with old/new/both) 
+📱 Device Simulator (but works without)  
 
-In fact, we tested a lot of configurations:
+👆 Input System: both (but works with old/new/both) 
+
+#### Supported Configurations
 
 | Unity Version | Input System |      |     | ARFoundation |             | Interaction Mode |                  |
 |---------------|--------------|------|-----|--------------|-------------|------------------|------------------|
@@ -84,7 +102,8 @@ In fact, we tested a lot of configurations:
 <sup id="table-sup-3">3</sup> "Support" here means: ARSimulation does not affect your builds, it is purely for Editor simulation.  
 <sup id="table-sup-4">4</sup> We haven't done as extensive testing as with the others yet. Making Desktop builds with ARSimulation is very useful for testing multiplayer scenarios without the need to deploy to multiple mobile devices.
 
-![AR Simulation running in Device Simulator](../../wiki/images/device-simulator.gif)
+![AR Simulation running in Device Simulator](../../wiki/images/device-simulator.gif)  
+*ARSimulation running in Device Simulator.*
 
 ## Technical Details 🔎
 
