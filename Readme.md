@@ -8,7 +8,7 @@ ARSimulation is a custom XR backend built on top of the [XR plugin architecture]
 
 It basically allows you to fly around in the Editor and test out your AR app, without having to change any code or structure. Import the package and go.
 
-[![Zero Setup](wiki/images/simple-explanation.gif)](https://youtu.be/3b0rXkKGPF8)
+[![Zero Setup](../../wiki/images/simple-explanation.gif)](https://youtu.be/3b0rXkKGPF8)
 *This scene only uses ARFoundation features.*
 
 Because it's just another XR Plugin, it works with your existing app, ARFoundation, XR Interaction Toolkit, and even MARS. Zero code changes or setup needed!
@@ -17,8 +17,8 @@ Because it's just another XR Plugin, it works with your existing app, ARFoundati
 - Add the ARSimulation package to your project
 - Open any scene that is set up for ARFoundation, or set up a new one with 
 - Press Play
-- Press RMB <span class="inline-image">![Right Mouse Button](wiki/images/right-click.svg)</span> + Use WASD to move around,  
-LMB <span class="inline-image">![Left Mouse Button](wiki/images/left-click.svg)</span> to click/touch/interact with your app
+- Press RMB <span class="inline-image">![Right Mouse Button](../../wiki/images/right-click.svg)</span> + Use WASD to move around,  
+LMB <span class="inline-image">![Left Mouse Button](../../wiki/images/left-click.svg)</span> to click/touch/interact with your app
 - Done.
 
 #### Need more tracked planes?
@@ -49,7 +49,7 @@ The same works for Point Clouds.
 Import the Sample " for a nicely dressed apartement as starting point.
 
 #### URP example
-[![URP Sample scene as Environment](wiki/images/urp-yt-preview.jpg)](https://youtu.be/RLLoR3mZ_fg)
+[![URP Sample scene as Environment](../../wiki/images/urp-yt-preview.jpg)](https://youtu.be/RLLoR3mZ_fg)
 
 #### Works great with
 - Device Simulator (but works without)
@@ -80,7 +80,7 @@ In fact, we tested a lot of configurations:
 
 ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and thus plugs right into ARFoundation and other systems in the VR/AR realm inside Unity. 
 
-![XR Architecture - ARSimulation](wiki/images/XRArchitecture-ARSimulation.png)
+![XR Architecture - ARSimulation](../../wiki/images/XRArchitecture-ARSimulation.png)
 *Currently supported features are marked orange.*
 
 This architecture has some advantages:
@@ -119,7 +119,7 @@ MARS is very ambitious and future-facing. It tries to anticipate many new types 
 It wraps _around_ ARFoundation instead of extending it, which is great for some usecases but makes it very heavy for others.  
 A core concept of MARS is _Functionality Injection_, which at its base feels pretty similar to what the XR SDK system is trying to achieve (note: FI might allow for more complex scenarious, but solves a similar problem of device-specific implementations.)
 
-![XR Architecture - MARS](wiki/images/XRArchitecture-Mars.png)
+![XR Architecture - MARS](../../wiki/images/XRArchitecture-Mars.png)
 
 > ARSimulation: A non-invasive Editor Simulation Backend
 
