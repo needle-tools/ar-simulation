@@ -10,7 +10,7 @@ Non-invasive, drop-in solution.
 <a href="#technical-details-">Technical Details</a> 🔎 • 
 <a href="#but-there-is-also-mars-now-">Comparison to MARS</a> 🚀 • 
 <a href="#related-solutions-">Related Solutions</a> 👪 • 
-<a href="#contact-✍️">Say hi</a> ✍️
+<a href="#contact-%EF%B8%8F">Say hi</a> ✍️
 
 ## What is this?
   
