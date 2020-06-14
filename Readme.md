@@ -105,7 +105,7 @@ Import the Sample "Example Apartment" for a nicely dressed apartement 🏡 as st
 ![AR Simulation running in Device Simulator](../../wiki/images/device-simulator.gif)  
 *ARSimulation running in Device Simulator.*
 
-## Technical Details 🔎
+## Technical Details 🔬
 
 ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and thus plugs right into ARFoundation and other systems in the VR/AR realm inside Unity. 
 
@@ -135,7 +135,7 @@ ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and th
   We have no idea what that means, [Link to Forum Thread](https://forum.unity.com/threads/warnings-in-editor-when-using-custom-xrsystem.908852/)  
 - ARSimulation currently has a dependency on XRLegacyInputHelpers that isn't needed in call cases; we will remove that dependency in a future release.  
 
-## But there is also MARS now! 🚀
+## But there is also MARS now! 🔭
 
 **Long story short:**
 - If you are starting a new project, are new to AR dev but have a lot of financial resources, are building a very complex AR app with multiple planes and dynamic content and constraints between objects, then MARS might be a good fit.  
