@@ -25,8 +25,8 @@ Because it's just another XR Plugin and we took great care to simulate important
 And if you need more control, there's a lot of knobs to turn. 
 
 ## Quick Start ⚡
-- Install ARSimulation by dropping this package into Unity:  
-  📦 • [ARSimulation Installer]()
+- Install ARSimulation by dropping this package into Unity 2019.3+:  
+  📦 • [ARSimulation Installer](https://github.com/needle-tools/ar-simulation/releases/download/release%2F1.0.0-preview.3/ARSimulationInstaller.unitypackage)
 - Open any scene that is set up for ARFoundation, or set up a new one with ARFoundation
 - Press Play
 - Press RMB (Right Mouse Button) + Use WASD to move around,  
@@ -90,7 +90,7 @@ Import the Sample "Example Apartment" for a nicely dressed apartement 🏡 as st
 | Unity Version | Input System |      |     | ARFoundation |             | Interaction Mode |                  |
 |---------------|--------------|------|-----|--------------|-------------|------------------|------------------|
 |               | Old          | Both | New | 3.1          | 4.0          | Game View        | Device Simulator<sup><a href="#table-sup-1">1</a></sup> |
-| 2019.3        | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
+| 2019.3/4      | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 | 2020.1b       | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 | 2020.2a       | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 
