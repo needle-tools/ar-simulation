@@ -2,15 +2,16 @@
 > Build AR apps with confidence.  
 Iterate fast, right in Editor.  
 Non-invasive, drop-in solution.  
+Fair pricing.  
 
-<a href="#quick-start-">Quick Start</a> ⚡ • 
-<a href="#license--pricing-">License & Pricing</a> 💸 • 
-<a href="documentation-">Documentation</a> 📜
+<a href="#quick-start-">Quick&nbsp;Start</a>&nbsp;⚡ • 
+<a href="#license--pricing-">License&nbsp;&&nbsp;Pricing</a>&nbsp;💸 • 
+<a href="#documentation-">Documentation</a>&nbsp;📜
   
-<a href="#technical-details-">Technical Details</a> 🔎 • 
-<a href="#but-there-is-also-mars-now-">Comparison to MARS</a> 🚀 • 
-<a href="#related-solutions-">Related Solutions</a> 👪 • 
-<a href="#contact-%EF%B8%8F">Say hi</a> ✍️
+<a href="#technical-details-">Technical&nbsp;Details</a>&nbsp;🔎 • 
+<a href="#but-there-is-also-mars-now-">Comparison&nbsp;to&nbsp;MARS</a>&nbsp;🚀 • 
+<a href="#related-solutions-">Related&nbsp;Solutions</a>&nbsp;👪 • 
+<a href="#contact-✍️">Say&nbsp;hi</a>&nbsp;✍️
 
 ## What is this?
   
@@ -24,18 +25,21 @@ Because it's just another XR Plugin and we took great care to simulate important
 And if you need more control, there's a lot of knobs to turn. 
 
 ## Quick Start ⚡
-- Install ARSimulation by dropping this package into Unity:  
-  📦 • [ARSimulation Installer]()
+- Install ARSimulation by dropping this package into Unity 2019.3+:  
+  📦 • [ARSimulation Installer](https://github.com/needle-tools/ar-simulation/releases/download/release%2F1.0.0-preview.3/ARSimulationInstaller.unitypackage)
 - Open any scene that is set up for ARFoundation, or set up a new one with ARFoundation
 - Press Play
 - Press RMB (Right Mouse Button) + Use WASD to move around,  
-LMB (Left Mouse Button) to click/touch/interact with your app
-- Done.
+LMB (Left Mouse Button) to click • touch • interact with your app
+- Done.  
 
 ## License & Pricing 💸  
-Using ARSimulation **requires a license** — please buy seats for your team through Unity AssetStore (link coming soon).  
+Using ARSimulation **requires you to buy a license** —  
+please buy seats for your team through Unity AssetStore (link coming soon).  
+This is not a subscription, but a single $50 payment.  
 
-You can use it for 7 days **for evaluation purposes**, without buying a license. We trust you. 🧐  
+You can use it for 7 days **for evaluation purposes only**,  
+without buying a license. We trust you. 🧐  
 
 ## Documentation 📜
 
@@ -86,7 +90,7 @@ Import the Sample "Example Apartment" for a nicely dressed apartement 🏡 as st
 | Unity Version | Input System |      |     | ARFoundation |             | Interaction Mode |                  |
 |---------------|--------------|------|-----|--------------|-------------|------------------|------------------|
 |               | Old          | Both | New | 3.1          | 4.0          | Game View        | Device Simulator<sup><a href="#table-sup-1">1</a></sup> |
-| 2019.3        | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
+| 2019.3/4      | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 | 2020.1b       | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 | 2020.2a       | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 
@@ -192,7 +196,7 @@ Note that MARS has a lot of additional tools and features (functionality injecti
 <sup id="comparison-table-sup-3">3</sup> MARS uses a custom "Device View", but doesn't support the Unity-provided Device Simulator package. This means you can't test your UIs with MARS with proper DPI settings (e.g. the typical use of *Canvas: Physical Size*).  
 <sup id="comparison-table-sup-4">4</sup> MARS has a concept of *Landmarks* that are created from ARKit blendshapes and ARCore raw meshes, but no direct support for either.  
 
-## Open Issues on Unity's end 🚧
+## Open Issues on Unity's end 🐛
 Unfortunately it seems nobody at Unity anticipated someone building custom XR providers in C# that are actually supposed to work in the Editor. It's advertised as a "way to build custom C++ plugins" only.  
 
 This has lead to funny situations where we reporting bugs around usage in Editor (e.g. of the ARFoundation Samples, XR Interaction Toolkit, and others), and Unity telling us that these "don't matter since you can't use them in Editor anyways". Well guys, we hope now you see why we were asking.  
