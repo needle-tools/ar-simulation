@@ -73,7 +73,7 @@ The same works for Point Clouds.
 
 [Video: Complex Environment Simulation](https://youtu.be/nPvPdRppIpY)
 
-Import the Sample "Example Apartment" for a nicely dressed apartement 🏡 as starting point:
+A nicely dressed apartement sample as starting point will be added soon: 🏡
 ![sample: Example Apartment](../../wiki/images/simulated-environment.gif)
 
 ### URP example 🔨
@@ -81,22 +81,22 @@ Import the Sample "Example Apartment" for a nicely dressed apartement 🏡 as st
 *Click preview to watch video*
 
 ### Works great with 
-📱 Device Simulator (but works without)  
+📱 [Device Simulator](https://github.com/needle-mirror/com.unity.device-simulator) (but works without)  
 
-👆 Input System: both (but works with old/new/both) 
+👆 Input System: both (but works with old/[new](https://github.com/needle-mirror/com.unity.inputsystem)/both) 
 
 #### Supported Configurations
 
 | Unity Version | Input System |      |     | ARFoundation |             | Interaction Mode |                  |
 |---------------|--------------|------|-----|--------------|-------------|------------------|------------------|
-|               | Old          | Both | New | 3.1          | 4.0          | Game View        | Device Simulator<sup><a href="#table-sup-1">1</a></sup> |
+|               | Old          | Both | [New](https://github.com/needle-mirror/com.unity.inputsystem) | [3.1](https://github.com/needle-mirror/com.unity.xr.arfoundation/tree/3.1.3)          | [4.0](https://github.com/needle-mirror/com.unity.xr.arfoundation/)          | Game View        | [Device Simulator](https://github.com/needle-mirror/com.unity.device-simulator)<sup><a href="#table-sup-1">1</a></sup> |
 | [![](https://img.shields.io/badge/%40-2019.3/4-green.svg)](https://unity.com/de/releases/2019-3)      | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 | [![](https://img.shields.io/badge/%40-2020.1b-green.svg)](https://unity3d.com/de/beta/2020.1b)      | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 | [![](https://img.shields.io/badge/%40-2020.2a-green.svg)](https://unity3d.com/de/beta/2020.2a)       | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 
 | Unity Version | Render Pipeline |           |                 | Platform |                   |               |
 |---------------|-----------------|-----------|-----------------|----------|-------------------|---------------|
-|               | Built-in        | URP       | HDRP<sup><a href="#table-sup-2">2</a></sup> | Editor   | iOS/Android Build<sup><a href="#table-sup-3">3</a></sup> | Desktop Build<sup><a href="#table-sup-4">4</a></sup>                |
+|               | Built-in        | [URP](https://github.com/needle-mirror/com.unity.render-pipelines.universal)       | HDRP<sup><a href="#table-sup-2">2</a></sup> | Editor   | iOS/Android Build<sup><a href="#table-sup-3">3</a></sup> | Desktop Build<sup><a href="#table-sup-4">4</a></sup>                |
 | [![](https://img.shields.io/badge/%40-2019.3/4-green.svg)](https://unity.com/de/releases/2019-3)        | ✔️              | ✔️        | —      | ✔️      |  ✔️                                         | untested     |
 | [![](https://img.shields.io/badge/%40-2020.1b-green.svg)](https://unity3d.com/de/beta/2020.1b)       | ✔️              | ✔️        | —      | ✔️      |  ✔️                                         | untested     |
 | [![](https://img.shields.io/badge/%40-2020.2a-green.svg)](https://unity3d.com/de/beta/2020.2a)       | ✔️              | ✔️        | —      | ✔️      |  ✔️                                         | untested     |
@@ -111,7 +111,7 @@ Import the Sample "Example Apartment" for a nicely dressed apartement 🏡 as st
 
 ## Technical Details 🔬
 
-ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and thus plugs right into ARFoundation and other systems in the VR/AR realm inside Unity. 
+ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and thus plugs right into [ARFoundation](https://github.com/needle-mirror/com.unity.xr.arfoundation) and other systems in the VR/AR realm inside Unity. 
 
 ![XR Architecture - ARSimulation](../../wiki/images/XRArchitecture-ARSimulation.png)  
 *Currently supported features are marked orange.*
@@ -135,7 +135,7 @@ ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and th
 - if your scene feels to dark / does not use environment lighting, make sure "Auto Generate" is on in Lighting Window or bake light data.  
   (spherical harmonics simulation will only work if the shaders are aware that they should use it)
 - ARFoundation 4 logs warnings in Editor:  
-  "No active UnityEngine.XR.XRInputSubsystem is available. Please ensure that a valid loader configuration exists in the XR project settings."  
+  ``No active UnityEngine.XR.XRInputSubsystem is available. Please ensure that a valid loader configuration exists in the XR project settings.``
   We have no idea what that means, [Link to Forum Thread](https://forum.unity.com/threads/warnings-in-editor-when-using-custom-xrsystem.908852/)  
 - ARSimulation currently has a dependency on XRLegacyInputHelpers that isn't needed in call cases; we will remove that dependency in a future release.  
 
