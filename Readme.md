@@ -90,16 +90,16 @@ Import the Sample "Example Apartment" for a nicely dressed apartement 🏡 as st
 | Unity Version | Input System |      |     | ARFoundation |             | Interaction Mode |                  |
 |---------------|--------------|------|-----|--------------|-------------|------------------|------------------|
 |               | Old          | Both | New | 3.1          | 4.0          | Game View        | Device Simulator<sup><a href="#table-sup-1">1</a></sup> |
-| 2019.3/4      | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
-| 2020.1b       | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
-| 2020.2a       | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
+| [![](https://img.shields.io/badge/%40-2019.3/4-green.svg)](https://unity.com/de/releases/2019-3)      | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
+| [![](https://img.shields.io/badge/%40-2020.1b-green.svg)](https://unity3d.com/de/beta/2020.1b)      | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
+| [![](https://img.shields.io/badge/%40-2020.2a-green.svg)](https://unity3d.com/de/beta/2020.2a)       | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 
 | Unity Version | Render Pipeline |           |                 | Platform |                   |               |
 |---------------|-----------------|-----------|-----------------|----------|-------------------|---------------|
 |               | Built-in        | URP       | HDRP<sup><a href="#table-sup-2">2</a></sup> | Editor   | iOS/Android Build<sup><a href="#table-sup-3">3</a></sup> | Desktop Build<sup><a href="#table-sup-4">4</a></sup>                |
-| 2019.3        | ✔️              | ✔️        | —      | ✔️      |  ✔️                                         | untested     |
-| 2020.1b       | ✔️              | ✔️        | —      | ✔️      |  ✔️                                         | untested     |
-| 2020.2a       | ✔️              | ✔️        | —      | ✔️      |  ✔️                                         | untested     |
+| [![](https://img.shields.io/badge/%40-2019.3/4-green.svg)](https://unity.com/de/releases/2019-3)        | ✔️              | ✔️        | —      | ✔️      |  ✔️                                         | untested     |
+| [![](https://img.shields.io/badge/%40-2020.1b-green.svg)](https://unity3d.com/de/beta/2020.1b)       | ✔️              | ✔️        | —      | ✔️      |  ✔️                                         | untested     |
+| [![](https://img.shields.io/badge/%40-2020.2a-green.svg)](https://unity3d.com/de/beta/2020.2a)       | ✔️              | ✔️        | —      | ✔️      |  ✔️                                         | untested     |
 
 <sup id="table-sup-1">1</sup> Recommended. Feels very nice to use, and gives correct sizes for UI etc.  
 <sup id="table-sup-2">2</sup> HDRP is not supported by Unity on iOS/Android currently.  
@@ -232,3 +232,6 @@ And of course there's [MARS](https://unity.com/de/products/mars), the newly rele
 [@marcel_wiessler](https://twitter.com/marcel_wiessler) • 
 [@hybridherbst](https://twitter.com/hybdridherbst) • 
 [Say hi!](mailto:hi@needle.tools?subject=Hi!)
+
+[![](https://img.shields.io/discord/717429793926283276?color=FF9800&label=Discord)](https://discord.gg/CFZDp4b)
+
