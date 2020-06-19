@@ -36,9 +36,9 @@ LMB (Left Mouse Button) to click • touch • interact with your app
 <sup id="start-sup-1">1</sup> If you're using AR Foundation 4 go to ``Project Settings/XR Plug-in Management`` and tick ARSimulation on in the PC/Standalone settings tab
 
 ## License & Pricing 💸  
-Using ARSimulation **requires you to buy a license** —  
+Using ARSimulation **requires you to buy a per-seat license** —  
 please buy seats for your team through Unity AssetStore (link coming soon).  
-This is not a subscription, but a single $50 payment.  
+This is a single $60 payment, not a monthly subscription.  
 
 You can use it for 7 days **for evaluation purposes only**,  
 without buying a license. We trust you. 🧐  
