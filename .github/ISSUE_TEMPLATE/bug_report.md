@@ -27,6 +27,7 @@ assignees: ''
 
 **Versions (please complete the following information):**
  - Unity [e.g. 2019.3.14f1]
- - ARFoundation [e.g. 3.1.3]
+ - ARFoundation [e.g. 3.1.3] 
  - OS: [e.g. Windows]
  - ARSimulation [e.g. 1.0.0]
+ - relevant packages if any [e.g. Device Simulator v2.2.2]
