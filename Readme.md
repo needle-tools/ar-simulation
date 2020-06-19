@@ -26,7 +26,7 @@ And if you need more control, there's a lot of knobs to turn.
 
 ## Quick Start ⚡
 - Install ARSimulation by dropping this package into Unity 2019.3+:  
-  📦 • [ARSimulation Installer](https://github.com/needle-tools/ar-simulation/releases/download/release%2F1.0.0-preview.3/ARSimulationInstaller.unitypackage)
+  [📦 ARSimulation Installer](https://github.com/needle-tools/ar-simulation/releases/download/release%2F1.0.0-preview.3/ARSimulationInstaller.unitypackage)
 - Open any scene that is set up for ARFoundation or click ``Tools/AR Simulation/Setup Scene``
 - Press Play<sup><a href="#start-sup-1">1</a></sup>
 - Press RMB (Right Mouse Button) + Use WASD to move around,  
