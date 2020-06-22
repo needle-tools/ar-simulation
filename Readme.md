@@ -123,7 +123,7 @@ ARSimulation is a `XR Plugin` that works with Unity's XR SDK infrastructure and 
 - Requires Zero Changes™ for working with other plugins that use ARFoundation
 
 ## Known Issues 🚧
-- Camera background is supported (with custom 3D scenes), but no occlusion support right now (same as ARFoundation by default)
+- Camera background is supported (with custom 3D scenes), but our default shader has no occlusion support right now (same as ARFoundation by default). You can just use your own plane shaders of course that supports occlusion (see ``AR Foundation samples/Plane Occlusion`` scene)
 - Environment cubemap support is platform-specific  
   (Reason: Unity bug, [Issue Tracker Link](https://issuetracker.unity3d.com/product/unity/issues/guid/1215635))
 - No support for simulating faces, people, or collaboration right now  
