@@ -29,8 +29,8 @@ And if you need more control, there's a lot of knobs to turn.
   [📦 ARSimulation Installer](https://github.com/needle-tools/ar-simulation/releases/download/release%2F1.0.0-preview.5/ARSimulationInstaller.unitypackage)
 - Open any scene that is set up for ARFoundation or click ``Tools/AR Simulation/Setup Scene``
 - Press Play
-- Press RMB (Right Mouse Button) + Use WASD to move around,  
-LMB (Left Mouse Button) to click • touch • interact with your app
+- Press `RMB (Right Mouse Button)` + Use `WASD` to move around,  
+`LMB (Left Mouse Button)` to click • touch • interact with your app
 - Done.  
 
 ## License & Pricing 💸  
@@ -49,8 +49,8 @@ We are working on improving the docs right now and making some nice "Getting Sta
 Please [open an issue](https://github.com/needle-tools/ar-simulation/issues/new/choose) and tell us about it! We want this to be as useful as possible to speed up your workflow.
 
 ### Need more tracked planes? ✈
-- drop the `SimulatedPlane` Prefab into the scene in Edit or Play Mode
-- move and adjust as necessary  
+- Drop the `SimulatedPlane` Prefab into the scene in Edit or Play Mode
+- Move and adjust as necessary  
 
 [Video: Custom Planes](https://youtu.be/I5LUYohV8oI)  
 [Video: Runtime Adjustments](https://youtu.be/eS9v0dSpYQk)
@@ -59,17 +59,17 @@ The same works for Point Clouds.
 (Tracked 3D Objects Coming Soon™)
 
 ### Working with Image Tracking? 🖼
-- just press play, if your scene uses image tracking a `Simulated Tracked Image` is generated for you.
-- if you're using more than one tracked image, generate them with `Empty GameObject` + `SimulatedARTrackedImage` of your choice
+- Just press play, if your scene uses image tracking a `Simulated Tracked Image` is generated for you.
+- If you're using more than one tracked image, generate them with `Empty GameObject` + `SimulatedARTrackedImage` of your choice
   (needs to be in a `ReferenceImageLibrary` of course)
 
 
 ### Want to test against a more complicated scenery? 🏰
-- add your geometry, ideally as Prefab
-- add a `SimulatedReality` component to it
-- press Play
-- done.
-- (background camera image rendering 📷 is experimental right now)
+- Add your geometry, ideally as Prefab
+- Add a `SimulatedReality` component to it
+- Press Play
+- Done.
+- (Background camera image rendering 📷 is experimental right now)
 
 [Video: Complex Environment Simulation](https://youtu.be/nPvPdRppIpY)
 
@@ -118,21 +118,21 @@ ARSimulation is a `XR Plugin` that works with Unity's XR SDK infrastructure and 
 
 **This architecture has some advantages:**
 - ARSimulation will not clutter your project
-- it does not show up at all in your compiled app (otherwise it's a bug, please let us know)
+- Does not show up at all in your compiled app (otherwise it's a bug, please let us know)
 - easier to maintain with future ARFoundation changes
-- requires Zero Changes™ for working with other plugins that use ARFoundation
+- Requires Zero Changes™ for working with other plugins that use ARFoundation
 
 ## Known Issues 🚧
-- camera background is supported (with custom 3D scenes), but no occlusion support right now (same as ARFoundation by default)
-- environment cubemap support is platform-specific  
+- Camera background is supported (with custom 3D scenes), but no occlusion support right now (same as ARFoundation by default)
+- Environment cubemap support is platform-specific  
   (Reason: Unity bug, [Issue Tracker Link](https://issuetracker.unity3d.com/product/unity/issues/guid/1215635))
-- no support for simulating faces, people, or collaboration right now  
+- No support for simulating faces, people, or collaboration right now  
   (let us know if you feel this is important to you!)
-- partial support for meshing simulation  
+- Partial support for meshing simulation  
   (some support, but not identical to specific devices)
-- touch input is single-touch for now, waiting for Unity to support it better & looking into it ourselves  
+- Touch input is single-touch for now, waiting for Unity to support it better & looking into it ourselves  
   (Reason: Device Simulator only supports single touch, since Input.SimulateTouch only supports one)
-- if your scene feels to dark / does not use environment lighting, make sure `Auto Generate` is on in Lighting Window or bake light data.  
+- If your scene feels to dark / does not use environment lighting, make sure `Auto Generate` is on in Lighting Window or bake light data.  
   (Reason: spherical harmonics simulation will only work if the shaders are aware that they should use it)
 - ARFoundation 4 logs warnings in Editor:  
   ``No active UnityEngine.XR.XRInputSubsystem is available. Please ensure that a valid loader configuration exists in the XR project settings.``
