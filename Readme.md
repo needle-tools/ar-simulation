@@ -49,7 +49,7 @@ We are working on improving the docs right now and making some nice "Getting Sta
 Please [open an issue](https://github.com/needle-tools/ar-simulation/issues/new/choose) and tell us about it! We want this to be as useful as possible to speed up your workflow.
 
 ### Need more tracked planes? ✈
-- drop SimulatedPlane prefab into the scene in Edit or Play Mode
+- drop the `SimulatedPlane` Prefab into the scene in Edit or Play Mode
 - move and adjust as necessary  
 
 [Video: Custom Planes](https://youtu.be/I5LUYohV8oI)  
@@ -59,21 +59,21 @@ The same works for Point Clouds.
 (Tracked 3D Objects Coming Soon™)
 
 ### Working with Image Tracking? 🖼
-- just press play, if your scene uses image tracking a Simulated Tracked Image is generated for you.
-- if you're using more than one tracked image, generate them with Empty GameObject + SimulatedARTrackedImage of your choice
-  (needs to be in a ReferenceImageLibrary of course)
+- just press play, if your scene uses image tracking a `Simulated Tracked Image` is generated for you.
+- if you're using more than one tracked image, generate them with `Empty GameObject` + `SimulatedARTrackedImage` of your choice
+  (needs to be in a `ReferenceImageLibrary` of course)
 
 
 ### Want to test against a more complicated scenery? 🏰
 - add your geometry, ideally as Prefab
-- add a SimulatedReality component to it
+- add a `SimulatedReality` component to it
 - press Play
 - done.
-- (📷 background camera image rendering is experimental right now)
+- (background camera image rendering 📷 is experimental right now)
 
 [Video: Complex Environment Simulation](https://youtu.be/nPvPdRppIpY)
 
-A nicely dressed apartement sample as starting point will be added soon: 🏡
+Here's a preview of a nicely dressed apartement sample: 🏡
 ![sample: Example Apartment](../../wiki/images/simulated-environment.gif)
 
 ### URP example 🔨
@@ -111,33 +111,33 @@ A nicely dressed apartement sample as starting point will be added soon: 🏡
 
 ## Technical Details 🔬
 
-ARSimulation is a XR Plugin that works with Unity's XR SDK infrastructure and thus plugs right into [ARFoundation](https://github.com/needle-mirror/com.unity.xr.arfoundation) and other systems in the VR/AR realm inside Unity. 
+ARSimulation is a `XR Plugin` that works with Unity's XR SDK infrastructure and thus plugs right into [ARFoundation](https://github.com/needle-mirror/com.unity.xr.arfoundation) and other systems in the VR/AR realm inside Unity. 
 
 ![XR Architecture - ARSimulation](../../wiki/images/XRArchitecture-ARSimulation.png)  
 *Currently supported features are marked orange.*
 
 **This architecture has some advantages:**
 - ARSimulation will not clutter your project
-- it does not show up at all in your compiled app (otherwise it's a bug)
+- it does not show up at all in your compiled app (otherwise it's a bug, please let us know)
 - easier to maintain with future ARFoundation changes
 - requires Zero Changes™ for working with other plugins that use ARFoundation
 
 ## Known Issues 🚧
-- camera background is supported (with custom 3D scenes), but no occlusion support right now
+- camera background is supported (with custom 3D scenes), but no occlusion support right now (same as ARFoundation by default)
 - environment cubemap support is platform-specific  
-  (Unity bug, [Issue Tracker Link](https://issuetracker.unity3d.com/product/unity/issues/guid/1215635))
+  (Reason: Unity bug, [Issue Tracker Link](https://issuetracker.unity3d.com/product/unity/issues/guid/1215635))
 - no support for simulating faces, people, or collaboration right now  
   (let us know if you feel this is important to you!)
 - partial support for meshing simulation  
   (some support, but not identical to specific devices)
-- touch input is single-touch for now, waiting for Unity to support it better  
-  (Device Simulator only supports single touch, since Input.SimulateTouch only supports one)
-- if your scene feels to dark / does not use environment lighting, make sure "Auto Generate" is on in Lighting Window or bake light data.  
-  (spherical harmonics simulation will only work if the shaders are aware that they should use it)
+- touch input is single-touch for now, waiting for Unity to support it better & looking into it ourselves  
+  (Reason: Device Simulator only supports single touch, since Input.SimulateTouch only supports one)
+- if your scene feels to dark / does not use environment lighting, make sure `Auto Generate` is on in Lighting Window or bake light data.  
+  (Reason: spherical harmonics simulation will only work if the shaders are aware that they should use it)
 - ARFoundation 4 logs warnings in Editor:  
   ``No active UnityEngine.XR.XRInputSubsystem is available. Please ensure that a valid loader configuration exists in the XR project settings.``
-  We have no idea what that means, [Link to Forum Thread](https://forum.unity.com/threads/warnings-in-editor-when-using-custom-xrsystem.908852/)  
-- ARSimulation currently has a dependency on XRLegacyInputHelpers that isn't needed in call cases; we will remove that dependency in a future release.  
+  We have no idea what that means: [Link to Forum Thread](https://forum.unity.com/threads/warnings-in-editor-when-using-custom-xrsystem.908852/)  
+- ARSimulation currently has a dependency on `XRLegacyInputHelpers` that isn't needed in call cases; we will remove that dependency in a future release.  
 
 ## But there is also MARS now! 🔭
 
