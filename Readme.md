@@ -192,7 +192,7 @@ Note that MARS has a lot of additional tools and features (functionality injecti
 
 
 <sup id="comparison-table-sup-1">1</sup> MARS uses `Input.GetMouseButtonDown` for editor input AND on-device input. This means: no testing of XR Interaction Toolkit features, no multitouch. You can see the (somewhat embarassing) MARS input example at [this Unity Forum link](https://forum.unity.com/threads/mars-direct-placement-example.908381/). ARSimulation supports full single-touch simulation in GameView and DeviceSimulator.  
-<sup id="comparison-table-sup-2">2</sup> ARSimulation doesn't support occlusion right now, which matches what ARFoundation shaders currently do (no occlusion).  
+<sup id="comparison-table-sup-2">2</sup> ARSimulation's plane shader doesn't support occlusion right now, which matches what ARFoundation shaders currently do (no occlusion). You can still use your own shaders that support occlusion (see ``AR Foundation samples/PlaneOcclusion`` scene)  
 <sup id="comparison-table-sup-3">3</sup> MARS uses a custom "Device View", but doesn't support the Unity-provided Device Simulator package. This means you can't test your UIs with MARS with proper DPI settings (e.g. the typical use of *Canvas: Physical Size*).  
 <sup id="comparison-table-sup-4">4</sup> MARS has a concept of *Landmarks* that are created from ARKit blendshapes and ARCore raw meshes, but no direct support for either.  
 
