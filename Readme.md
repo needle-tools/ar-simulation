@@ -49,7 +49,7 @@ We are working on improving the docs right now and making some nice "Getting Sta
 Please [open an issue](https://github.com/needle-tools/ar-simulation/issues/new/choose) and tell us about it! We want this to be as useful as possible to speed up your workflow.
 
 ### Need more tracked planes? ✈
-- Drop the `SimulatedPlane` Prefab into the scene in Edit or Play Mode
+- Drop the `SimulatedPlane` Prefab into the scene in Edit or Play Mode (or just add another ``SimulatedARPlane`` component)
 - Move and adjust as necessary  
 
 [Video: Custom Planes](https://youtu.be/I5LUYohV8oI)  
