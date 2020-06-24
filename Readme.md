@@ -202,6 +202,9 @@ Unfortunately it seems nobody at Unity anticipated someone building custom XR pr
 This has lead to funny situations where we reporting bugs around usage in Editor (e.g. of the ARFoundation Samples, XR Interaction Toolkit, and others), and Unity telling us that these "don't matter since you can't use them in Editor anyways". Well guys, we hope now you see why we were asking.  
   
 - Device Simulator has no way to do multitouch simulation (usually a must for any touch simulator). This means that rotating in ARFoundation isn't working out of the box in Editor right now. We are currently using LeanTouch as a workaround, as that gives proper multitouch simulation support in both Game View and Device Simulator.
+- Device Simulator does not support tapCount (is always 1). Case 1258166
+- New Input System does not support tapCount (is always 0, even on devices). Case 1258165
+- Device Simulator: Simulated touches oscillate between "stationary" and "moved" in Editor (no subpixel accuracy?). Case 1258158
 - There's a number of warnings around subsystem usage in Editor. They seem to not matter much but are annoying (and incorrect).
 - There's an open issue with Cubemap creation in Editor (necessary for Environment Probe simulation). [Issue Tracker](https://issuetracker.unity3d.com/product/unity/issues/guid/1215635)
 - Device Simulator disables Mouse input completely - we're working around that here but be aware when you try to create Android / iOS apps that also support mouse. [Forum Thread](https://forum.unity.com/threads/new-device-simulator-preview.751067/page-4#post-5952482)
@@ -225,7 +228,7 @@ And of course there's [MARS](https://unity.com/de/products/mars), the newly rele
 
 ## Contact ✍️
 
-[Forum Thread — ARSimulation]()
+[Forum Thread — ARSimulation](https://forum.needle.tools/ar-simulation)
 
 <b>[needle — tools for unity](https://needle.tools)</b> • 
 [@NeedleTools](https://twitter.com/NeedleTools) • 
