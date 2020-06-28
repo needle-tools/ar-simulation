@@ -29,10 +29,83 @@ And if you need more control, there's a lot of knobs to turn.
   [📦 ARSimulation Installer](https://github.com/needle-tools/ar-simulation/releases/download/release%2F1.0.0-preview.5/ARSimulationInstaller.unitypackage)
 - Open any scene that is set up for ARFoundation or click ``Tools/AR Simulation/Convert to AR Scene``
 - Press Play
-- Press `RMB (Right Mouse Button)` + Use `WASD` to move around,  
-`LMB (Left Mouse Button)` to click • touch • interact with your app
+- Press <kbd>RMB</kbd> (`Right Mouse Button`) + Use <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>` to move around,  
+<kbd>LMB</kbd> (`Left Mouse Button`) to click • touch • interact with your app
 - Done.  
 
+## Slow Start 🐢
+<details>
+  <summary>Click here for a step-by-step walkthrough — it's worth the time!</summary>
+  
+  
+Here, we'll walk you through using AR Simulation with the arfoundation-samples project which provides a good overview over what AR Simulation can and can't do.  
+  
+    
+- **First, we'll download the samples and take a look at what we got.**  
+  - Clone or download Unity's [arfoundation-samples project from GitHub](https://github.com/Unity-Technologies/arfoundation-samples)  
+  - Open the project (at time of writing, this is currently using Unity 2019.4.1f1, but should work with any 2019.3+).  
+  - Open the menu scene `Scenes/ARFoundationMenu/Menu.unity`  
+  - Press Play.  
+    *"Hey wait, we didn't import ARSimulation yet!" "Yes indeed. We want to show you how lonely it's here without it."*  
+  - The samples scene looks somewhat like this (more or less pixelated depending on your game window settings):  
+    ![arfoundation-samples: first play](../../wiki/images/slow-start-01-arfoundation-samples-first-play.png)  
+    *"Wow what's up with the font?!" "Unfortunately seems Unity thinks this will ever only be looked at on a device, in a build. AR in Editor?! No way."*  
+      
+- **Let's give it a chance and install the Device Simulator package to make this look better.**  
+  - Stop Play Mode  
+  - Open Package Manager
+  - Make sure "All Packages" and "Preview Packages" is enabled (*Note: on 2020.1/2, you'll need to enable preview settings in Project Settings first)
+  - Install Device Simulator 2.2.2+
+    ![arfoundation-samples: install Device Simulator](../../wiki/images/slow-start-02-install-device-simulator.png)  
+  - In your Game View, select the little new dropdown and then `Simulator`.  
+    ![arfoundation-samples: set up Device Simulator](../../wiki/images/slow-start-03-switch-to-device-simulator.png)  
+  - Press Play  
+  - Note that this looks more like a device now:   
+    ![arfoundation-samples: Device Simulator View](../../wiki/images/slow-start-04-device-sim-view.png)  
+  - Also note, this happily tells you that no features are available in the Editor at all.  
+    That's exactly what AR features you can test with Unity out of the box: zero.  
+    Luckily, AR Simulation is here to change that!  
+      
+- **Next up, the fun stuff happens. We'll install AR Simulation.**
+  - Stop Play Mode
+  - Download the [📦 ARSimulation Installer](https://github.com/needle-tools/ar-simulation/releases/download/release%2F1.0.0-preview.5/ARSimulationInstaller.unitypackage)  
+  - Drop the installer into your project.  
+  - You should be greeted by our Getting Started window, and have documentation and sample scenes ready:  
+    ![arsimulation: Getting Started](../../wiki/images/slow-start-05-installation.png)  
+    You can close this window for now — you can always get back to it with `Window/AR Simulation/Getting Started`.  
+  - Press Play.  
+    ![arsimulation: first play](../../wiki/images/slow-start-06-arsim-first-play.png)  
+    *"Oh, suddenly there are a lot of sample scene buttons white!" "You probably guessed it, that means we can simulate them!"*  
+      
+- **Let's play with the samples a bit.**
+  - Click on the `Simple AR` button to load that scene.  
+  - Press and hold the <kbd>Right Mouse Button</kbd> and use the <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>Q</kbd><kbd>E</kbd> keys to move around the scene. Move the mouse to look around.  
+  - Note that there's an orange plane detected and tracked, together with some matching pointcloud visuals. These visuals come straight from ARFoundation - this is _exactly_ what happens on device, including everything going on in the Unity hierarchy.  
+  - Release <kbd>Right Mouse Button</kbd> and click with the <kbd>Left Mouse Button</kbd> to spawn something.  
+    ![arsimulation: Simple AR](../../wiki/images/slow-start-07-arsim-sample-01.png)  
+  - Press the Return button  
+  - Click on the `Interaction` button to load that scene.  
+    This scene uses the XR Interaction Toolkit for interactive-ness, another thing that is notoriously hard to test in Editor.  
+    ![arsimulation: Interaction](../../wiki/images/slow-start-08-arfoundation-interaction.gif)  
+    Press the `Return` button  
+  - Last one here, let's try `Sample UX` — click it!  
+    ![arsimulation: Sample UX](../../wiki/images/slow-start-12-sample-ux.gif)  
+    
+- *"OK, I got it, the arfoundation-samples work. Is there more?" "Well my dear, of course!"*  
+  - From `Samples/AR Simulation/someversion/Getting Started`, open the scene `RaycastPlanes.unity`.  
+  - This scene uses a `Simulated AR Environment` to provide a more complex testing scenario.  
+  - Press Play.  
+  - Move around the scene using <kbd>Right Mouse Button</kbd> and <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>Q</kbd><kbd>E</kbd>.  
+  - While moving around, notice that planes are detected as you go:  
+    ![arsimulation: simulated environment 1](../../wiki/images/slow-start-09-arsimulation-planes.gif)  
+  - Click the <kbd>Left Mouse Button</kbd> to spawn little guys on all planes.  
+    ![arsimulation: simulated environment 2](../../wiki/images/slow-start-11-sample-tracked-planes.png) 
+      
+*"Wow. This makes testing AR applications so much easier! How can I thank you guys?" "Well, please don't forget to buy a license!"*
+</details>
+    
+    
+    
 ## License & Pricing 💸  
 Using ARSimulation **requires you to buy a per-seat license** —  
 please buy seats for your team through Unity AssetStore (link coming soon).  
