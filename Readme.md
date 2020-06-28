@@ -49,21 +49,21 @@ Here, we'll walk you through using AR Simulation with the arfoundation-samples p
     *"Hey wait, we didn't import ARSimulation yet!" "Yes indeed. We want to show you how lonely it's here without it."*  
   - The samples scene looks somewhat like this (more or less pixelated depending on your game window settings):  
     ![arfoundation-samples: first play](../../wiki/images/slow-start-01-arfoundation-samples-first-play.png)  
-    *"Wow what's up with the font?!" "Unfortunately seems Unity thinks this will ever only be looked at on a device, in a build. AR in Editor?! No way."*  
+    ***Q:** "Wow what's up with the font?!"*  
+    ***A:** "Unfortunately seems Unity thinks this will ever only be looked at on a device, in a build. AR in Editor?! Hm."*  
       
 - **Let's give it a chance and install the Device Simulator package to make this look better.**  
-  - Stop Play Mode  
-  - Open Package Manager
-  - Make sure "All Packages" and "Preview Packages" is enabled (*Note: on 2020.1/2, you'll need to enable preview settings in Project Settings first)
-  - Install Device Simulator 2.2.2+
+  - Stop Play Mode    
+  - Open Package Manager  
+  - Make sure "All Packages" and "Preview Packages" is enabled (*Note: on 2020.1/2, you'll need to enable preview settings in Project Settings first)  
+  - Install Device Simulator 2.2.2+  
     ![arfoundation-samples: install Device Simulator](../../wiki/images/slow-start-02-install-device-simulator.png)  
   - In your Game View, select the little new dropdown and then `Simulator`.  
     ![arfoundation-samples: set up Device Simulator](../../wiki/images/slow-start-03-switch-to-device-simulator.png)  
   - Press Play  
   - Note that this looks more like a device now:   
     ![arfoundation-samples: Device Simulator View](../../wiki/images/slow-start-04-device-sim-view.png)  
-  - Also note, this happily tells you that no features are available in the Editor at all.  
-    That's exactly what AR features you can test with Unity out of the box: zero.  
+  - Also note, this tells you that **no AR features are available in the Editor**.   
     Luckily, AR Simulation is here to change that!  
       
 - **Next up, the fun stuff happens. We'll install AR Simulation.**
@@ -75,7 +75,8 @@ Here, we'll walk you through using AR Simulation with the arfoundation-samples p
     You can close this window for now — you can always get back to it with `Window/AR Simulation/Getting Started`.  
   - Press Play.  
     ![arsimulation: first play](../../wiki/images/slow-start-06-arsim-first-play.png)  
-    *"Oh, suddenly there are a lot of sample scene buttons white!" "You probably guessed it, that means we can simulate them!"*  
+    ***Q:** "Oh, suddenly there are a lot of sample buttons that have turned white?"*  
+    ***A:** "You probably guessed it, that means we can now simulate those scenes!"*  
       
 - **Let's play with the samples a bit.**
   - Click on the `Simple AR` button to load that scene.  
@@ -91,7 +92,8 @@ Here, we'll walk you through using AR Simulation with the arfoundation-samples p
   - Last one here, let's try `Sample UX` — click it!  
     ![arsimulation: Sample UX](../../wiki/images/slow-start-12-sample-ux.gif)  
     
-- *"OK, I got it, the arfoundation-samples work. Is there more?" "Well my dear, of course!"*  
+- ***Q:** "OK, I got it, the arfoundation-samples work. Is there more?"*   
+  ***A:** "Well, happy that you ask, of course!"*    
   - From `Samples/AR Simulation/someversion/Getting Started`, open the scene `RaycastPlanes.unity`.  
   - This scene uses a `Simulated AR Environment` to provide a more complex testing scenario.  
   - Press Play.  
@@ -101,7 +103,8 @@ Here, we'll walk you through using AR Simulation with the arfoundation-samples p
   - Click the <kbd>Left Mouse Button</kbd> to spawn little guys on all planes.  
     ![arsimulation: simulated environment 2](../../wiki/images/slow-start-11-sample-tracked-planes.png) 
       
-*"Wow. This makes testing AR applications so much easier! How can I thank you guys?" "Well, please don't forget to buy a license!"*
+***Q:** "Wow. This makes testing AR applications so much easier! How can I thank you guys?" 
+***A:** "Well, please don't forget to <a href="#license--pricing-">buy a license</a>!"*
 </details>
     
     
