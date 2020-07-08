@@ -111,7 +111,7 @@ Here, we'll walk you through using AR Simulation with the arfoundation-samples p
     
 ## License & Pricing 💸  
 Using ARSimulation **requires you to buy a per-seat license** —  
-please buy seats for your team through Unity AssetStore (link coming soon).  
+please buy seats for your team through [Unity AssetStore](https://get.needle.tools/ar-simulation).  
 This is a single $60 payment, not a monthly subscription.  
 
 You can use it for 7 days **for evaluation purposes only**,  
