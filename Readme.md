@@ -1,3 +1,5 @@
+![AR Simulation Cover Image](../../wiki/images/SocialMediaImage.png)
+
 # AR Simulation
 > Build AR apps with confidence.  
 Iterate fast, right in Editor.  
