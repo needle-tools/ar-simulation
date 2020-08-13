@@ -95,7 +95,9 @@ Here, we'll walk you through using AR Simulation with the arfoundation-samples p
     ![arsimulation: Sample UX](../../wiki/images/slow-start-12-sample-ux.gif)  
     
 - ***Q:** "OK, I got it, the arfoundation-samples work. Is there more?"*   
-  ***A:** "Well, happy that you ask, of course!"*    
+  ***A:** "Well, happy that you ask, of course!"*
+  - Make sure you have the AR Simulation samples installed at `Samples/AR Simulation`.
+    - if not, open `Window > AR Simulation > Getting Started` and click `Install Samples`.
   - From `Samples/AR Simulation/someversion/Getting Started`, open the scene `RaycastPlanes.unity`.  
   - This scene uses a `Simulated AR Environment` to provide a more complex testing scenario.  
   - Press Play.  
