@@ -4,7 +4,7 @@ on:
     types: [opened]
 jobs:
   build:
-    name: Build
+    name: Notify Discord
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
