@@ -317,6 +317,6 @@ And of course there's [MARS](https://unity.com/de/products/mars), the newly rele
 [Say hi!](mailto:hi@needle.tools?subject=Hi!)
 
 [![Discord Link](https://img.shields.io/discord/717429793926283276?color=FF9800&label=Discord)](https://discord.gg/CFZDp4b)
-[![Downloads](https://img.shields.io/github/downloads/needle-tools/ar-simulation/total.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues-raw/needle-tools/ar-simulation)]()
+[![Downloads](https://img.shields.io/github/downloads/needle-tools/ar-simulation/total.svg)](https://github.com/needle-tools/ar-simulation)
+[![GitHub Issues](https://img.shields.io/github/issues-raw/needle-tools/ar-simulation)](https://github.com/needle-tools/ar-simulation/issues)
 
