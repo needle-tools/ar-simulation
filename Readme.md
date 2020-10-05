@@ -169,7 +169,7 @@ Here's a preview of a nicely dressed apartement sample: 🏡
 
 | Unity Version | Input System |      |     | ARFoundation |             | Interaction Mode |                  |
 |---------------|--------------|------|-----|--------------|-------------|------------------|------------------|
-|               | Old          | Both | [New](https://github.com/needle-mirror/com.unity.inputsystem) | [3.1](https://github.com/needle-mirror/com.unity.xr.arfoundation/tree/3.1.3)          | [4.0](https://github.com/needle-mirror/com.unity.xr.arfoundation/)          | Game View        | [Device Simulator](https://github.com/needle-mirror/com.unity.device-simulator)<sup><a href="#table-sup-1">1</a></sup> |
+|               | Old          | Both | [New](https://github.com/needle-mirror/com.unity.inputsystem) | [3.1<sup><a href="#table-sup-5">5</a></sup>](https://github.com/needle-mirror/com.unity.xr.arfoundation/tree/3.1.3)          | [4.0](https://github.com/needle-mirror/com.unity.xr.arfoundation/)          | Game View        | [Device Simulator](https://github.com/needle-mirror/com.unity.device-simulator)<sup><a href="#table-sup-1">1</a></sup> |
 | [![](https://img.shields.io/badge/%40-2019.3/4-green.svg)](https://unity.com/de/releases/2019-3)      | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 | [![](https://img.shields.io/badge/%40-2020.1b-green.svg)](https://unity3d.com/de/beta/2020.1b)      | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
 | [![](https://img.shields.io/badge/%40-2020.2a-green.svg)](https://unity3d.com/de/beta/2020.2a)       | ✔️           | ✔️   | ✔️  | ✔️           | ✔️          | ✔️               | ✔️               |
@@ -185,6 +185,7 @@ Here's a preview of a nicely dressed apartement sample: 🏡
 <sup id="table-sup-2">2</sup> HDRP is not supported by Unity on iOS/Android currently.  
 <sup id="table-sup-3">3</sup> "Support" here means: ARSimulation does not affect your builds, it is purely for Editor simulation.  
 <sup id="table-sup-4">4</sup> We haven't done as extensive testing as with the others yet. Making Desktop builds with ARSimulation is very useful for testing multiplayer scenarios without the need to deploy to multiple mobile devices.
+<sup id="table-sup-5">5</sup> There is a known bug in XR Plugin Management 3.2.13 and earlier. Please use to 3.2.15 or newer.
 
 ![AR Simulation running in Device Simulator](../../wiki/images/device-simulator.gif)  
 *ARSimulation running in Device Simulator.*
@@ -290,6 +291,7 @@ This has lead to funny situations where we reporting bugs around usage in Editor
 - Device Simulator disables Mouse input completely - we're working around that here but be aware when you try to create Android / iOS apps that also support mouse. [Forum Thread](https://forum.unity.com/threads/new-device-simulator-preview.751067/page-4#post-5952482)
 - in 2020.1 and 2020.2, even when you enable "New Input System", the Input System package is not installed in package manager. You have to install it manually. [Forum Thread](https://forum.unity.com/threads/new-input-system-not-installed-in-2020-1-after-enabling-it.908027/)
 - switching from a scene with Object Tracking to a scene with Image Tracking on device crashes Android apps (we'll report a bug soon)
+- XR Plugin Management versions 3.2.13 and older are buggy and lose settings sometimes. Please use XR Plugin Management 3.2.15 or greater.
 
 ## Related solutions 👪
 Since Unity still hasn't provided a viable solution for testing AR projects without building to devices, a number of interesting projects arose to overcome that, especially for remoting.  
