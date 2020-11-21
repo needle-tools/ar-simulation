@@ -1,3 +1,8 @@
+# https://github.community/t/trigger-a-github-workflow-if-it-matches-a-particular-comment-in-the-pull-request/116402
+# https://stackoverflow.com/questions/58597010/how-to-access-a-github-issue-comment-body-using-github-actions
+# https://developer.github.com/v3/issues/comments/
+# https://developer.github.com/v3/issues/
+
 name: discord message
 on:
   issues:
@@ -5,8 +10,9 @@ on:
   issue_comment:
     types: [created]
 jobs:
-  build:
-    name: Notify Discord
+  newissue:
+    if: contains(github.event.comment.html_url, 'comment') == false
+    name: Discord New Issue
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -16,4 +22,17 @@ jobs:
         webhook_id: ${{ secrets.WEBHOOK_ID }}
         webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
         username: "GitHub"
-        message: ":loudspeaker: **${{github.event.issue.title}}**\n${{github.event.issue.html_url}}."
+        message: ":loudspeaker: **${{github.event.issue.title}}**\n${{github.event.issue.html_url}}.\n${{github.event.issue.body}}"
+  comment:   
+    if: contains(github.event.comment.html_url, 'comment')
+    name: Discord New Comment
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: send custom message with args
+      uses: appleboy/discord-action@master
+      with:
+        webhook_id: ${{ secrets.WEBHOOK_ID }}
+        webhook_token: ${{ secrets.WEBHOOK_TOKEN }}
+        username: "GitHub"
+        message: ":speech_balloon: **${{github.event.issue.title}}**\n${{github.event.comment.user.login}} says:\n${{github.event.comment.body}} \n${{github.event.comment.html_url}}."
