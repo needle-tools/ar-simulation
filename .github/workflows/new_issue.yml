@@ -2,6 +2,8 @@ name: discord message
 on:
   issues:
     types: [opened]
+  issue_comment:
+    types: [created]
 jobs:
   build:
     name: Notify Discord
