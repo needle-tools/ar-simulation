@@ -268,7 +268,7 @@ Note that MARS has a lot of additional tools and features (functionality injecti
 | Anchors | ✔️ | ❌ |
 | Meshing | (✔️) | ✔️ |
 | Face Tracking | ❌ | (✔️)<sup><a href="#comparison-table-sup-4">4</a></sup> |
-| Object Tracking | ❌ | ❌ |
+| Object Tracking | ✔️ | ❌ |
 | Human Segmentation | ❌ | ❌ |
 
 
