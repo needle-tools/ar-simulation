@@ -146,7 +146,7 @@ The same works for Point Clouds.
 
 ### Want to test against a more complicated scenery? 🏰
 - Add your geometry, ideally as Prefab
-- Add a `SimulatedReality` component to it
+- Add a `SimulatedEnvironment` component to it
 - Press Play
 - Done.
 - (Background camera image rendering 📷 is experimental right now)
