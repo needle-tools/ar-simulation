@@ -118,7 +118,7 @@ please buy seats for your team through [Unity AssetStore](https://get.needle.too
 This is a single $60 payment, not a monthly subscription.  
 
 You can use it for 7 days **for evaluation purposes only**,  
-without buying a license. We trust you. 🧐  
+without buying a license. 🧐  
 
 ## Documentation 📜
 
