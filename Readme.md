@@ -14,7 +14,7 @@ Fair pricing.
 <a href="#but-there-is-also-mars-now-">Comparison&nbsp;to&nbsp;MARS</a>&nbsp;🚀 • 
 <a href="#related-solutions-">Related&nbsp;Solutions</a>&nbsp;👪 • 
 <a href="#contact-%EF%B8%8F">Say&nbsp;hi</a>&nbsp;✍️ • 
-<a href="#troubleshooting">Troubleshooting</a>&nbsp;☂️
+<a href="#troubleshooting-%EF%B8%8F">Troubleshooting</a>&nbsp;☂️
 
 ## What is this?
   
