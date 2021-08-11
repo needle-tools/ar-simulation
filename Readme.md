@@ -120,6 +120,16 @@ This is a single $60 payment, not a monthly subscription.
 You can use it for 7 days **for evaluation purposes only**,  
 without buying a license. 🧐  
 
+
+    
+## Troubleshooting ☂️
+
+### Input does not work, I can not move around
+Go to ``Edit/Project Settings/XR-Plugin-Management`` and make sure that *AR Simulation* is checked ✔️ in the ``PC, Mac and Linux Standalone Settings`` tab.  
+![image](https://user-images.githubusercontent.com/5083203/125599584-2c5cdf1f-3b7d-41aa-b63e-def43c9f53dd.png)
+
+
+
 ## Documentation 📜
 
 We are working on improving the docs right now and making some nice "Getting Started" videos. Stay tuned — until then, here's some things you might need:
@@ -306,14 +316,6 @@ Unity Techologies is of course also experimenting with remoting, and currently h
 [Here's the forum thread for the upcoming Unity AR Remoting](https://forum.unity.com/threads/ar-remoting-simulation.720575/).
 
 And of course there's [MARS](https://unity.com/de/products/mars), the newly released, 600$/seat/year framework for simplified and flexible AR Authoring. It's probably a great solution for enterprises, and has a ton of additional tooling that goes way beyond what ARFoundation provides. We were Alpha testers of MARS and early on it became clear that it was not what many people believed it to be — a simple way to test your app without building to device. [Here's the Forum section for MARS](https://forum.unity.com/forums/unity-mars.494/).
-
-    
-## Troubleshooting ☂️
-
-### Input does not work, I can not move around
-Go to ``Edit/Project Settings/XR-Plugin-Management`` and make sure that *AR Simulation* is checked ✔️ in the ``PC, Mac and Linux Standalone Settings`` tab.  
-![image](https://user-images.githubusercontent.com/5083203/125599584-2c5cdf1f-3b7d-41aa-b63e-def43c9f53dd.png)
-
 
 ## Contact ✍️
 
