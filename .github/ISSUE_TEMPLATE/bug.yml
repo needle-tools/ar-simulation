@@ -48,6 +48,18 @@ body:
       placeholder: 0.0.0
     validations:
       required: true
+        
+  - type: dropdown
+    id: ar-foundation-version
+    attributes:
+      label: AR Foundation version
+      description: Which version of Unity's AR Foundation are you using in your project?
+      options:
+        - 3.x
+        - 4.x
+        - 5.x
+    validations:
+      required: true
       
   - type: textarea
     id: reproduction-steps
